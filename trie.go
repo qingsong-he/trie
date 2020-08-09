@@ -172,7 +172,6 @@ func (t *Trie) Remove(key string) {
 		if len(nByQuery.parent.children) > 1 && len(nByQuery.children) == 0 {
 			delete(nByQuery.parent.children, nByQuery.r)
 			nByQuery.parent = nil
-			nByQuery.children = nil
 		}
 	}
 }

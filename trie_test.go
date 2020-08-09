@@ -51,6 +51,9 @@ func TestTrie(t *testing.T) {
 		if len(t1.PrefixSearch("bar")) != 3 {
 			t.Fatal()
 		}
+		if len(t1.PrefixSearchWithElem("bar")) != 3 {
+			t.Fatal()
+		}
 
 		if len(t1.FuzzySearch("f")) != 3 {
 			t.Fatal()
@@ -59,6 +62,10 @@ func TestTrie(t *testing.T) {
 			t.Fatal()
 		}
 		if len(t1.FuzzySearch("fo")) != 3 {
+			t.Fatal()
+		}
+
+		if len(t1.FuzzySearchWithElem("fo")) != 3 {
 			t.Fatal()
 		}
 	}
